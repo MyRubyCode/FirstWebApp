@@ -20,10 +20,6 @@ get '/listCourses' do
     erb :listCourses
 end
 
-get '/register' do
-    erb :register
-end
-
 get '/addCourse' do
     erb :addCourse
 end
@@ -37,5 +33,10 @@ end
 
 get '/quit' do
     erb :quit
+end
+
+# register GET method
+get '/register' do
+    erb :register, :locals => {:name => params[:name], :age => params[:age], :major => params[:major], :email => params[:email]}
 end
 
