@@ -2,6 +2,7 @@ require 'sinatra'
 require 'rubygems'
 
 set :port, 8080
+set :bind, '0.0.0.0'
 set :views, "views"
 
 get '/' do

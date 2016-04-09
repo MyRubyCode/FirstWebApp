@@ -5,9 +5,50 @@
 	</head>
 <body>
 	<p>
-		<h4>Register</h4>
-		<h5>Enter Student Details:</h5>
-		<a href="/start">Back To Menu</a>
+		<h2 >Register</h2>
+
+		<div>
+			<h4> <%= name %></h4>
+			<h4> <%= age %></h4>
+			<h4> <%= major %></h4>
+			<h4> <%= email %></h4>
+		</div>
+
+		<div>
+			Major:
+			<select name="student_major" form="register_form">
+				<option value="Software">Software</option>
+				<option value="Electronic">Electronic</option>
+				<option value="Physics">Physics</option>
+				<option value="Chemistry">Chemistry</option>
+				<option value="Math">Math</option>
+			</select>
+
+			<form action="/register/" method="POST" id="register_form">
+				Name: <input type="text" name="student_name">
+				<br/>
+				Age: <input type="number" name="student_age">
+				<br/>
+				Email: <input type="text" name="student_email">
+				<br/>
+				<input type="submit">
+			</form>
+		</div>
+
+		<div>
+			<ul>
+			 	<li><a href="/start">Back To Menu</a></li><br/>
+			</ul>
+		</div>
 	</p>
+
+	
 </body>
+
+
+
+
+
+
+
 
